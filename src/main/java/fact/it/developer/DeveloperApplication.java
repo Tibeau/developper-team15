@@ -1,13 +1,13 @@
-package fact.it.developper;
+package fact.it.developer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DevelopperApplication {
+public class DeveloperApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DevelopperApplication.class, args);
+        SpringApplication.run(DeveloperApplication.class, args);
     }
 
 }
