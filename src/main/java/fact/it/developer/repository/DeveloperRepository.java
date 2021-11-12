@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DeveloperRepository extends JpaRepository<Developer, String>{
+public interface DeveloperRepository extends JpaRepository<Developer, Integer>{
     Developer findDeveloperByCount_workers(int Count_workers);
     List<Developer> findDevelopersByNameContaining(String Name);
 

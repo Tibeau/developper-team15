@@ -17,15 +17,16 @@ public class Developer {
     private int founding_year;
 
 
-    public Developer(String name, int count_workers, int founding_year) {
-        this.id = id;
-        this.name = name;
-        this.count_workers = count_workers;
-        this.founding_year = founding_year;
-    }
-
     public Developer() {
     }
+
+
+    public Developer(String name, int count_workers, int founding_year) {
+        setName(name);
+        setCount_workers(count_workers);
+        setFounding_year(founding_year);
+    }
+
 
     public int getId() {
         return id;
