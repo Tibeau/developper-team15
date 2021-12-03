@@ -19,11 +19,11 @@ public class DeveloperController {
     public void fillDB(){
         if(developerRepository.count()==0){
             developerRepository.save(new Developer("687468435454",5,1));
-            developerRepository.save(new Developer("687468435454",2,2));
+            developerRepository.save(new Developer("687468435451",2,2));
             developerRepository.save(new Developer("687468434567",4,9));
         }
 
-        System.out.println("Reviews test: " + developerRepository.findDeveloperByCount_workers(2));
+
     }
 
     @GetMapping("/developers/name/{name}")
