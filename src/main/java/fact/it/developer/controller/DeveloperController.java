@@ -23,12 +23,17 @@ public class DeveloperController {
             developerRepository.save(new Developer("687468434567",4,9));
         }
 
-        System.out.println("Reviews test: " + developerRepository.findDeveloperByCount_workers(2));
+        System.out.println("Reviews test: ");
+    }
+
+    @GetMapping("/developers/{name}")
+    public Developer getDeveloperByName(@PathVariable String name){
+        return developerRepository.findDeveloperByName(name);
     }
 
     @GetMapping("/developers/name/{name}")
     public List<Developer> getDevelopersByName(@PathVariable String name){
-        return developerRepository.findDevelopersByNameContaining(name);
+        return developerRepository.findByNameContaining(name);
     }
 
 }
