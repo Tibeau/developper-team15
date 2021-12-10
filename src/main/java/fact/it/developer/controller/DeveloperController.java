@@ -19,16 +19,20 @@ public class DeveloperController {
     public void fillDB(){
         if(developerRepository.count()==0){
             developerRepository.save(new Developer("687468435454",5,1));
-            developerRepository.save(new Developer("687468435454",2,2));
+            developerRepository.save(new Developer("687468435451",2,2));
             developerRepository.save(new Developer("687468434567",4,9));
         }
 
+<<<<<<< HEAD
         System.out.println("Reviews test: ");
     }
 
     @GetMapping("/developers/{name}")
     public Developer getDeveloperByName(@PathVariable String name){
         return developerRepository.findDeveloperByName(name);
+=======
+
+>>>>>>> 9a7a8d9174e4c871e0cf26181c38f0ec55c79305
     }
 
     @GetMapping("/developers/name/{name}")
