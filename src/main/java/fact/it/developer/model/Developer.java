@@ -27,6 +27,10 @@ public class Developer {
         setFounding_year(founding_year);
     }
 
+    public Developer(String name) {
+        setName(name);
+    }
+
 
     public int getId() {
         return id;
