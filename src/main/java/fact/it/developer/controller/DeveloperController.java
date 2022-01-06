@@ -18,9 +18,9 @@ public class DeveloperController {
     @PostConstruct
     public void fillDB(){
         if(developerRepository.count()==0){
-            developerRepository.save(new Developer("687468435454",5,1));
-            developerRepository.save(new Developer("687468435451",2,2));
-            developerRepository.save(new Developer("687468434567",4,9));
+            developerRepository.save(new Developer("Activision",5,1852));
+            developerRepository.save(new Developer("Bethesda",2,1935));
+            developerRepository.save(new Developer("Blizzard",4,2015));
         }
 
         System.out.println("Reviews test: ");
