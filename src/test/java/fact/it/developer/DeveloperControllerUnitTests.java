@@ -62,8 +62,8 @@ public class DeveloperControllerUnitTests {
                 .andExpect(jsonPath("$[1].name",is("Developer2")));
     }
     @Test
-    void whenSetId_thenReturnDevloperId() throws Exception {
-        Developer devloperId1 = developer1;
+    void whenSetId_thenReturnDeveloperId() throws Exception {
+        Developer developerId1 = developer1;
         developerId1.setId("1");
         assertThat(developer1.getId()).isEqualTo("1");
     }
