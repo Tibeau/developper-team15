@@ -63,7 +63,7 @@ public class DeveloperControllerUnitTests {
     }
     @Test
     void whenSetId_thenReturnDevloperId() throws Exception {
-        Game devloperId1 = devloper1;
+        Developer devloperId1 = devloper1;
         developerId1.setId("1");
         assertThat(developer1.getId()).isEqualTo("1");
     }
