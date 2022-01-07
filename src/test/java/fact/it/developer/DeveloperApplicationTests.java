@@ -7,6 +7,11 @@ public class DeveloperApplicationTests {
     @Test
     void contextLoads() {
     }
+    @Test
+    public void main() {
+        DeveloperApplication.main(new String[] {});}
 
 }
+
+
 
