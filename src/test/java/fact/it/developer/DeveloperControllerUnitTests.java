@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,6 +61,13 @@ public class DeveloperControllerUnitTests {
                 .andExpect(jsonPath("$[0].name",is("Developer1")))
                 .andExpect(jsonPath("$[1].name",is("Developer2")));
     }
+    @Test
+    void whenSetId_thenReturnDevloperId() throws Exception {
+        Game devloperId1 = devloper1;
+        developerId1.setId("1");
+        assertThat(developer1.getId()).isEqualTo("1");
+    }
+
 
 }
 
