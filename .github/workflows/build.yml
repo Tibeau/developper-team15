@@ -18,11 +18,11 @@ jobs:
           
        
       - uses: getong/mariadb-action@v1.1
-      with:
-        mariadb database: developer_db
-        mardiadb root password: ${{ secrets.MARIADB_PASSWORD }} 
-        mariadb user: root
-        mardiadb password:  ${{ secrets.MARIADB_PASSWORD }} 
+        with:
+         mariadb database: developer_db
+         mardiadb root password: ${{ secrets.MARIADB_PASSWORD }} 
+         mariadb user: root
+         mardiadb password:  ${{ secrets.MARIADB_PASSWORD }} 
         
       - name: Build with Maven
         run:  mvn -B verify
