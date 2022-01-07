@@ -64,8 +64,8 @@ public class DeveloperControllerUnitTests {
     @Test
     void whenSetId_thenReturnDeveloperId() throws Exception {
         Developer developerId1 = developer1;
-        developerId1.setId("1");
-        assertThat(developer1.getId()).isEqualTo("1");
+        developerId1.setId(1);
+        assertThat(developer1.getId()).isEqualTo(1);
     }
 
 
