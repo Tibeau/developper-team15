@@ -18,20 +18,20 @@ jobs:
       - name: Start MardiaDB for integration test
         uses: getong/mariadb-action@v1.1
         with:
-          mariadb database: 'developerdb_test' # Optional, default value is "test". The specified database which will be created.
-          mariadb root password: ${{ secrets.MARIADB_PASSWORD }} # Required if "mysql user" is empty, default is empty. The root superuser password
+          mysql database: 'developerdb_test' # Optional, default value is "test". The specified database which will be created.
+          mysql root password: ${{ secrets.MARIADB_PASSWORD }} # Required if "mysql user" is empty, default is empty. The root superuser password
       
       - name: Build, test and package project
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=tibeau_developper-team15
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Tibeau_developper-team15
 
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/book-info-service-ex:latest .
+        run: docker build -t ${{ secrets.DOCKER_USER }}/developper-team15:latest .
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/book-info-service-ex:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/developper-team15:latest
